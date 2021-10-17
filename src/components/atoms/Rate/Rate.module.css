@@ -1,0 +1,13 @@
+input[type='radio'] {
+  display: none;
+}
+
+/* .starRating {
+  margin-top: 140px;
+  justify-content: space-between;
+} */
+
+.star {
+  margin-left: 2px;
+  justify-content: space-between;
+}

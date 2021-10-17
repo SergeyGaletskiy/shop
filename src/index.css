@@ -8,7 +8,8 @@
 
 body {
   margin: 0;
-  width: 100vw;
+  padding: 0;
+  width: 100%;
   min-height: 100vh;
   font-family: Raleway, Tahoma;
   -webkit-font-smoothing: antialiased;
@@ -16,6 +17,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden;
 }
 
 #root {

@@ -1,0 +1,13 @@
+.allClothes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.allClothesCatalog {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1280px;
+  margin-top: 100px;
+}

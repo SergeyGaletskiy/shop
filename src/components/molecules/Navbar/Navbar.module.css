@@ -11,7 +11,7 @@
 }
 
 .menuBars {
-  margin: 30px 0 0 30px;
+  margin-left: 30px;
   /* margin-left: 2rem; */
   font-size: 2rem;
   background: none;
@@ -58,7 +58,7 @@
 }
 
 .navText:hover {
-  background-color: #212033;
+  background-color: #27263d;
 }
 
 .navMenuItems {
@@ -75,6 +75,6 @@
   align-items: center;
 }
 
-span {
+.navItemTitle {
   margin-left: 16px;
 }

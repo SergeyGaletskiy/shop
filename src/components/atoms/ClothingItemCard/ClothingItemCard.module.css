@@ -1,0 +1,55 @@
+.clothingItemCard {
+  padding: 20px;
+  margin: 0 20px 100px;
+  max-width: 386px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.clothingItemCard:hover {
+  box-shadow: 1px 1px 7px 1px #505050;
+  margin-top: -2px;
+}
+
+.clothingItemImage {
+  max-width: 354px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clothingItemImage img {
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+
+.clothingItemSubtitle {
+  height: 40px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.clothingItemDescription {
+  margin-top: 20px;
+}
+.clothingItemRatenPrice {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 15px 10px;
+}
+
+.clothingItemPrice {
+  font-weight: 500;
+}
+
+/* .preview-card-poster {
+  display: flex;
+  margin: auto;
+  width: 131px;
+  height: 197px;
+  cursor: pointer;
+} */

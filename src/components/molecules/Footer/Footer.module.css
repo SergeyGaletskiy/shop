@@ -3,7 +3,7 @@
   bottom: 0;
   right: 0;
   width: 100vw;
-  background: #212033;
+  /* background: #212033; */
   height: 120px;
   z-index: -1;
 }
