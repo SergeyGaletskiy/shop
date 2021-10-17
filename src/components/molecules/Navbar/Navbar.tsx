@@ -63,7 +63,7 @@ export const Navbar = () => {
               <li key={item.id} className={cl.navText}>
                 <Link to={item.path} className={cl.navLink}>
                   {item.icon}
-                  <span>{item.title}</span>
+                  <span className={cl.navItemTitle}>{item.title}</span>
                 </Link>
               </li>
             ))}

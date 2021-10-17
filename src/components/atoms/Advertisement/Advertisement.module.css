@@ -1,0 +1,35 @@
+.advCard {
+  max-height: 600px;
+  border-radius: 20px;
+  margin: 10px;
+  cursor: pointer;
+  color: #fff;
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  transition: all 500ms ease-in-out;
+}
+
+.advImage {
+  max-width: 100%;
+}
+
+.advCardTagline {
+  position: relative;
+  font-size: 24px;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+
+.advCard.active {
+  flex: 10;
+}
+
+.advCard.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
