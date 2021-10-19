@@ -22,7 +22,7 @@ export const Electronics = () => {
 
   return (
     <div className={cl.allClothes}>
-      <CategorySubtitle subtitle="Jewelry" />
+      <CategorySubtitle subtitle="Electronics" />
       <div className={cl.allClothesCatalog}>
         {' '}
         {electronicsItems?.map((item) => (
