@@ -11,6 +11,8 @@ import { CartButton } from '../../components/atoms/CartButton';
 import { SingleItemPrice } from '../../components/atoms/SingleItemPrice';
 import { SingleItemDescription } from '../../components/atoms/SingleItemDescription';
 import { SingleItemTitle } from '../../components/atoms/SingleItemTitle';
+import { PathNav } from '../../components/molecules/PathNav';
+import { navDatabase } from '../../mock/navDatabase';
 
 export interface IUseParams {
   id: string;
@@ -36,46 +38,61 @@ export const SingleItemPage = () => {
   };
 
   return (
-    <div className={cl.allClothes}>
-      <div className={cl.previewImages}>
-        {[...Array(3)].map((image, i) => {
-          return (
-            <div key={i} className={cl.previewImage}>
-              <img src={singleItem.image} alt="" />
-            </div>
-          );
-        })}
-      </div>
-      <div className={cl.largeImage}>
-        <img src={singleItem.image} alt="" />
-      </div>
-      <div className={cl.fullInfo}>
-        <SingleItemTitle title={singleItem.title} />
+    <div className={cl.container}>
+      <PathNav
+        categoryLink={
+          navDatabase.filter(
+            (pathItem) =>
+              pathItem.title.toLowerCase() === singleItem.category.toLowerCase()
+          )[0].path
+        }
+        categoryName={singleItem.category.toUpperCase()}
+      />
 
-        <div className={cl.options}>
-          {stockDatabase.map((selectedId) =>
-            selectedId.id === +itemId
-              ? selectedId.stock.map((option) => (
-                  <OptionButton
-                    key={option.option}
-                    type="button"
-                    onClick={() => selectItemOption(option.option)}
-                    disabled={option.amount > 0 ? false : true}
-                    text={option.option}
-                  />
-                ))
-              : ''
-          )}
+      <div className={cl.allClothes}>
+        <div className={cl.previewImages}>
+          {[...Array(3)].map((image, i) => {
+            return (
+              <div key={i} className={cl.previewImage}>
+                <img src={singleItem.image} alt="" />
+              </div>
+            );
+          })}
         </div>
-        <SingleItemPrice price={singleItem.price} />
 
-        <CartButton
-          text="ADD TO CART"
-          disabled={Object.keys(selectedItem).length > 0 ? false : true}
-          onClick={() => console.log(selectedItem)}
-        />
+        <div className={cl.largeImage}>
+          <img src={singleItem.image} alt="" />
+        </div>
 
-        <SingleItemDescription description={singleItem.description} />
+        <div className={cl.fullInfo}>
+          <SingleItemTitle title={singleItem.title} />
+
+          <div className={cl.options}>
+            {stockDatabase.map((selectedId) =>
+              selectedId.id === +itemId
+                ? selectedId.stock.map((option) => (
+                    <OptionButton
+                      key={option.option}
+                      type="button"
+                      onClick={() => selectItemOption(option.option)}
+                      disabled={option.amount > 0 ? false : true}
+                      text={option.option}
+                    />
+                  ))
+                : ''
+            )}
+          </div>
+
+          <SingleItemPrice price={singleItem.price} />
+
+          <CartButton
+            text="ADD TO CART"
+            disabled={Object.keys(selectedItem).length > 0 ? false : true}
+            onClick={() => console.log(selectedItem)}
+          />
+
+          <SingleItemDescription description={singleItem.description} />
+        </div>
       </div>
     </div>
   );
