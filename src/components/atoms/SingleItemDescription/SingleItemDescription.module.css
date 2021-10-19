@@ -1,0 +1,7 @@
+.itemDescription {
+  margin-top: 40px;
+  color: #212033;
+  display: flex;
+  line-height: 20px;
+  text-align: justify;
+}

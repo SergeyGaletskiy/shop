@@ -1,0 +1,36 @@
+.optionAvailable {
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #1d1f22;
+  box-sizing: border-box;
+  margin-right: 10px;
+  color: #1d1f22;
+  cursor: pointer;
+  font-family: Raleway, Tahoma;
+  font-size: 16px;
+}
+
+.optionAvailable:hover {
+  background: #1d1f22;
+  color: #fff;
+}
+
+.optionAvailable[disabled] {
+  padding: 10px;
+  border: 1px solid #a6a6a6;
+  box-sizing: border-box;
+  margin-right: 10px;
+  color: #a6a6a6;
+  cursor: default;
+}
+
+.optionAvailable[disabled]:hover {
+  background: #fff;
+  color: #a6a6a6;
+  cursor: default;
+}
+
+.active {
+  background: #1d1f22;
+  color: #fff;
+}

@@ -1,0 +1,1 @@
+export { SingleItemDescription } from './SingleItemDescription';

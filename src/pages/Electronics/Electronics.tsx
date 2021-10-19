@@ -27,6 +27,7 @@ export const Electronics = () => {
         {' '}
         {electronicsItems?.map((item) => (
           <ClothingItemCard
+            itemId={item.id}
             key={item.id}
             itemImage={item.image}
             itemSubtitle={item.title}

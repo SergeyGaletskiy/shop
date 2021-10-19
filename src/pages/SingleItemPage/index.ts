@@ -1,0 +1,1 @@
+export { SingleItemPage } from './SingleItemPage';

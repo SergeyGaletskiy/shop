@@ -7,8 +7,10 @@ import { getCatalogAction } from '../../core';
 import { getCatalogState } from '../../core/selectors/catalogSelector';
 import { AdvBar } from '../../components/molecules/AdvBar';
 import { Loader } from '../../components/atoms/Loader';
+import { useHistory } from 'react-router';
 
 export const AllClothes = () => {
+  const history = useHistory();
   const dispatch = useDispatch();
 
   const { clothingItems } = useSelector(getCatalogState);
@@ -29,6 +31,8 @@ export const AllClothes = () => {
         {' '}
         {clothingItems?.map((item) => (
           <ClothingItemCard
+            // onClick={() => history.push(`/items/${item.id}`)}
+            itemId={item.id}
             key={item.id}
             itemImage={item.image}
             itemSubtitle={item.title}

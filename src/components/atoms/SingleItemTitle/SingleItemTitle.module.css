@@ -1,0 +1,9 @@
+.itemTitle {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+  display: flex;
+  text-align: start;
+  color: #212033;
+  margin-bottom: 30px;
+}

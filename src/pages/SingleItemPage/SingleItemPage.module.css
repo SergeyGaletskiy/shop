@@ -1,0 +1,85 @@
+.allClothes {
+  display: flex;
+  max-width: 1280px;
+  margin: auto;
+  margin-top: 200px;
+}
+
+.previewImage {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px 40px;
+  cursor: pointer;
+}
+
+.previewImage:hover {
+  box-shadow: 1px 1px 7px 1px #505050;
+}
+
+.previewImage img {
+  padding: 7px;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+
+.largeImage {
+  max-height: 600px;
+  margin: 0 30px;
+}
+
+.largeImage img {
+  max-height: 600px;
+}
+
+.fullInfo {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  padding: 0 15px;
+}
+
+.options {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.optionAvailable {
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #1d1f22;
+  box-sizing: border-box;
+  margin-right: 10px;
+  color: #1d1f22;
+  cursor: pointer;
+  font-family: Raleway, Tahoma;
+  font-size: 16px;
+}
+
+.optionAvailable:hover {
+  background: #1d1f22;
+  color: #fff;
+}
+
+.active {
+  background: #1d1f22;
+  color: #fff;
+}
+
+.optionAvailable[disabled] {
+  padding: 10px;
+  border: 1px solid #a6a6a6;
+  box-sizing: border-box;
+  margin-right: 10px;
+  color: #a6a6a6;
+  cursor: default;
+}
+
+.optionAvailable[disabled]:hover {
+  background: #fff;
+  color: #a6a6a6;
+  cursor: default;
+}
