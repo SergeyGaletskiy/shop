@@ -20,6 +20,10 @@ export class CatalogAPIService extends BaseService {
   public async getElectronicsCatalogItems() {
     return this.get(`category/electronics/`);
   }
+
+  public async getSingleItem(data: any) {
+    return this.get(`${data.payload}`);
+  }
 }
 
 export const CatalogService = new CatalogAPIService();

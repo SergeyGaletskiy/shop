@@ -30,3 +30,10 @@ export const setElectronicsCatalogAction = createAction(
 export const getElectronicsCatalogAction = createAction(
   ACTIONS.GET_ELECTRONICS_CATALOG
 )();
+
+export const setSingleItemAction = createAction(
+  ACTIONS.SET_SINGLE_ITEM
+)<IClothingItem | null>();
+export const getSingleItemAction = createAction(ACTIONS.GET_SINGLE_ITEM)<
+  any | null
+>();

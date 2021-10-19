@@ -5,6 +5,7 @@ import {
   womenCatalogSaga,
   jewelryCatalogSaga,
   electronicsCatalogSaga,
+  singleItemSaga,
 } from './sagas';
 
 export function* rootSaga() {
@@ -15,6 +16,7 @@ export function* rootSaga() {
       womenCatalogSaga(),
       jewelryCatalogSaga(),
       electronicsCatalogSaga(),
+      singleItemSaga(),
     ]);
   } catch (e) {}
 }

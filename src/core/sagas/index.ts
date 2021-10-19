@@ -3,3 +3,4 @@ export { menCatalogSaga } from './menCatalogSaga';
 export { womenCatalogSaga } from './womenCatalogSaga';
 export { jewelryCatalogSaga } from './jewelryCatalogSaga';
 export { electronicsCatalogSaga } from './electronicsCatalogSaga';
+export { singleItemSaga } from './singleItemSaga';

@@ -6,6 +6,7 @@ import {
   womenCatalogReducer,
   jewelryCatalogReducer,
   electronicsCatalogReducer,
+  singleItemReducer,
 } from '../core/reducers';
 
 export const rootReducer = combineReducers({
@@ -14,4 +15,5 @@ export const rootReducer = combineReducers({
   womenClothingItems: womenCatalogReducer,
   jewelryItems: jewelryCatalogReducer,
   electronicsItems: electronicsCatalogReducer,
+  singleItem: singleItemReducer,
 });
