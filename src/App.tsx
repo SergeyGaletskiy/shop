@@ -1,7 +1,6 @@
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import './App.css';
 import { Header } from './components/molecules/Header';
-import { Footer } from './components/molecules/Footer';
 import { AllClothes } from './pages/AllClothes';
 import { MenClothes } from './pages/MenClothes';
 import { WomenClothes } from './pages/WomenClothes';
@@ -15,6 +14,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Header />
+
         <Switch>
           <Route component={AllClothes} exact path="/" />
           <Route component={MenClothes} exact path="/men" />
@@ -24,9 +24,9 @@ function App() {
           <Route component={OtherGoods} exact path="/other" />
 
           <Route component={SingleItemPage} exact path="/items/:id" />
+
           {/* <Redirect to="./" /> */}
         </Switch>
-        <Footer />
       </BrowserRouter>
     </div>
   );

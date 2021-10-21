@@ -13,6 +13,7 @@ import { SingleItemDescription } from '../../components/atoms/SingleItemDescript
 import { SingleItemTitle } from '../../components/atoms/SingleItemTitle';
 import { PathNav } from '../../components/molecules/PathNav';
 import { navDatabase } from '../../mock/navDatabase';
+import { Footer } from '../../components/molecules/Footer';
 
 export interface IUseParams {
   id: string;
@@ -94,6 +95,7 @@ export const SingleItemPage = () => {
           <SingleItemDescription description={singleItem.description} />
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

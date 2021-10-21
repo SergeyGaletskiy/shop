@@ -5,7 +5,7 @@ import cl from './OtherGoods.module.css';
 
 export const OtherGoods = () => {
   return (
-    <div className={cl.allClothes}>
+    <div className={cl.container}>
       <CategorySubtitle subtitle="Other" />
       <img
         className={cl.image}

@@ -1,16 +1,19 @@
-.authNavText {
+.container {
+}
+
+.linkText {
   margin-top: 20px;
   display: inline;
   font-size: 2rem;
   color: #212033;
 }
 
-.authNavLink {
+.link {
   padding: 20px;
   cursor: pointer;
 }
 
-.authNavLink:hover {
+.link:hover {
   color: #27263d;
   border-bottom: 2px solid #27263d;
 }

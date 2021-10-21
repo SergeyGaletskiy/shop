@@ -3,18 +3,20 @@ import cl from './Header.module.css';
 import { Navbar } from '../Navbar';
 import { AuthNav } from '../AuthNav';
 import { Cart } from '../../atoms/Cart';
+import { LogoImage } from '../../atoms/LogoImage';
 
 export const Header = () => {
-  const [visibleCard, setVisibleCart] = useState(false);
+  const [visibleCart, setVisibleCart] = useState(false);
 
   return (
     <>
-      <div className={cl.header}>
+      <div className={cl.container}>
         <Navbar />
+        <LogoImage />
         <AuthNav />
-        <Cart onClick={() => setVisibleCart(!visibleCard)} />
+        <Cart onClick={() => setVisibleCart(!visibleCart)} />
       </div>
-      {visibleCard ? <div>Привет</div> : ''}
+      {visibleCart ? <div>Корзина</div> : ''}
     </>
   );
 };

@@ -46,24 +46,24 @@ export const Navbar = () => {
 
   return (
     <>
-      <div className={cl.navbar}>
-        <Link to="#" className={cl.menuBars}>
+      <div className={cl.openIconContainer}>
+        <Link to="#" className={cl.openIcon}>
           <FaIcons.FaBars onClick={showSidebar} />
         </Link>
       </div>
       <IconContext.Provider value={{ color: '#fff' }}>
-        <nav className={sidebar ? `${cl.navMenu} ${cl.active}` : cl.navMenu}>
-          <ul className={cl.navMenuItems} onClick={showSidebar}>
-            <li className={cl.navbarToggle}>
+        <nav className={sidebar ? `${cl.menu} ${cl.active}` : cl.menu}>
+          <ul className={cl.menuItems} onClick={showSidebar}>
+            <li className={cl.closeIconContainer}>
               <Link to="#">
                 <AiIcons.AiOutlineClose />
               </Link>
             </li>
             {navbarItems.map((item) => (
-              <li key={item.id} className={cl.navText}>
-                <Link to={item.path} className={cl.navLink}>
+              <li key={item.id} className={cl.linkText}>
+                <Link to={item.path} className={cl.link}>
                   {item.icon}
-                  <span className={cl.navItemTitle}>{item.title}</span>
+                  <span className={cl.itemTitle}>{item.title}</span>
                 </Link>
               </li>
             ))}

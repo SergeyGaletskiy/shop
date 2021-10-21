@@ -1,11 +1,11 @@
-.allClothes {
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 100px;
 }
 
-.allClothesCatalog {
+.catalog {
   display: flex;
   flex-wrap: wrap;
   max-width: 1280px;
