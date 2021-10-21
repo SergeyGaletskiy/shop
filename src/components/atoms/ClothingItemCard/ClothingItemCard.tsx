@@ -21,21 +21,19 @@ export const ClothingItemCard = ({
   onClick,
 }: IClothingItemCard) => {
   const history = useHistory();
-  // console.log(history);
 
   return (
     <div
-      className={cl.clothingItemCard}
-      // onClick={onClick}
+      className={cl.container}
       onClick={() => history.push(`/items/${itemId}`)}
     >
-      <div className={cl.clothingItemImage}>
+      <div className={cl.image}>
         <img src={itemImage} alt={itemImage} />
       </div>
-      <div className={cl.clothingItemDescription}>
-        <div className={cl.clothingItemSubtitle}>{itemSubtitle}</div>
-        <div className={cl.clothingItemRatenPrice}>
-          <div className={cl.clothingItemPrice}>{itemPrice}$</div>
+      <div className={cl.description}>
+        <div className={cl.subtitle}>{itemSubtitle}</div>
+        <div className={cl.rateAndPrice}>
+          <div className={cl.price}>{itemPrice}$</div>
           <div>
             <Rate rate={itemRate} />
           </div>

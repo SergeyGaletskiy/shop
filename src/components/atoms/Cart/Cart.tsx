@@ -8,7 +8,7 @@ interface ICart {
 
 export const Cart = ({ onClick }: ICart) => {
   return (
-    <div className={cl.cart} onClick={onClick}>
+    <div className={cl.container} onClick={onClick}>
       <AiIcons.AiOutlineShoppingCart />
     </div>
   );

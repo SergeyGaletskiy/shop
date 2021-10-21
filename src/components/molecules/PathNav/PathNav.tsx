@@ -12,7 +12,7 @@ export const PathNav = ({ categoryName, categoryLink }: IPathNav) => {
     <div className={cl.container}>
       <Link to={'../'} className={cl.pathNavLink}>
         <span className={cl.pathNavText}>MAIN</span>
-      </Link>{' '}
+      </Link>
       <span className={cl.pathNavText}>/</span>
       <Link to={`..${categoryLink}`} className={cl.pathNavLink}>
         <span className={cl.pathNavText}>{categoryName}</span>

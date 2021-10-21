@@ -21,9 +21,9 @@ export const MenClothes = () => {
   }
 
   return (
-    <div className={cl.allClothes}>
+    <div className={cl.container}>
       <CategorySubtitle subtitle="Men clothes" />
-      <div className={cl.allClothesCatalog}>
+      <div className={cl.catalog}>
         {' '}
         {menClothingItems?.map((item) => (
           <ClothingItemCard

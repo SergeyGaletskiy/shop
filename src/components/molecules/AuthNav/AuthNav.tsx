@@ -16,11 +16,11 @@ export const AuthNav = () => {
     },
   ];
   return (
-    <div>
-      <ul className={cl.authNavMenuItems}>
+    <div className={cl.container}>
+      <ul className={cl.menuItems}>
         {authNavItems.map((item) => (
-          <li key={item.id} className={cl.authNavText}>
-            <Link to={item.path} className={cl.authNavLink}>
+          <li key={item.id} className={cl.linkText}>
+            <Link to={item.path} className={cl.link}>
               <span>{item.title}</span>
             </Link>
           </li>

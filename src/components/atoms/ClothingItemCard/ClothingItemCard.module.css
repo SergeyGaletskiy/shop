@@ -1,4 +1,4 @@
-.clothingItemCard {
+.container {
   padding: 20px;
   margin: 0 20px 100px;
   max-width: 386px;
@@ -6,12 +6,12 @@
   border-radius: 8px;
 }
 
-.clothingItemCard:hover {
+.container:hover {
   box-shadow: 1px 1px 7px 1px #505050;
   margin-top: -2px;
 }
 
-.clothingItemImage {
+.image {
   max-width: 354px;
   height: 450px;
   display: flex;
@@ -19,13 +19,17 @@
   align-items: center;
 }
 
-.clothingItemImage img {
+.image img {
   max-width: 100%;
   height: auto;
   max-height: 100%;
 }
 
-.clothingItemSubtitle {
+.description {
+  margin-top: 20px;
+}
+
+.subtitle {
   height: 40px;
   overflow: hidden;
   display: -webkit-box;
@@ -33,23 +37,12 @@
   -webkit-box-orient: vertical;
 }
 
-.clothingItemDescription {
-  margin-top: 20px;
-}
-.clothingItemRatenPrice {
+.rateAndPrice {
   display: flex;
   justify-content: space-between;
   margin: 20px 15px 10px;
 }
 
-.clothingItemPrice {
+.price {
   font-weight: 500;
 }
-
-/* .preview-card-poster {
-  display: flex;
-  margin: auto;
-  width: 131px;
-  height: 197px;
-  cursor: pointer;
-} */
