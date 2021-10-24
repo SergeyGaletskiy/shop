@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import cl from './Header.module.css';
 import { Navbar } from '../Navbar';
 import { AuthNav } from '../AuthNav';
-import { Cart } from '../../atoms/Cart';
+import { CartIcon } from '../../atoms/CartIcon';
 import { LogoImage } from '../../atoms/LogoImage';
+import { CartPreview } from '../CartPreview';
 
 export const Header = () => {
   const [visibleCart, setVisibleCart] = useState(false);
@@ -14,9 +15,9 @@ export const Header = () => {
         <Navbar />
         <LogoImage />
         <AuthNav />
-        <Cart onClick={() => setVisibleCart(!visibleCart)} />
+        <CartIcon onClick={() => setVisibleCart(!visibleCart)} />
       </div>
-      {visibleCart ? <div>Корзина</div> : ''}
+      {visibleCart ? <CartPreview /> : ''}
     </>
   );
 };

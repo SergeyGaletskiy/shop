@@ -7,10 +7,10 @@ import { getCatalogAction } from '../../core';
 import { getCatalogState } from '../../core/selectors/catalogSelector';
 import { AdvBar } from '../../components/molecules/AdvBar';
 import { Loader } from '../../components/atoms/Loader';
-import { useHistory } from 'react-router';
+// import { useHistory } from 'react-router';
 
 export const AllClothes = () => {
-  const history = useHistory();
+  // const history = useHistory();
   const dispatch = useDispatch();
 
   const { clothingItems } = useSelector(getCatalogState);

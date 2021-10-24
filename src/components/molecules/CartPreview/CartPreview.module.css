@@ -1,0 +1,51 @@
+.container {
+  position: absolute;
+  right: 20px;
+  box-shadow: 1px 1px 7px 1px #212033;
+  padding: 20px;
+  background: #fff;
+  scrollbar-color: #6969dd #e0e0e0;
+  scrollbar-width: thin;
+}
+
+.subtitle {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.subtitle span {
+  font-weight: 700;
+}
+
+.items {
+  max-height: 500px;
+  scrollbar-color: #6969dd #e0e0e0;
+  scrollbar-width: thin;
+  overflow-y: scroll;
+}
+
+.items::-webkit-scrollbar {
+  width: 12px;
+  background-color: #92a3a3;
+}
+
+.items::-webkit-scrollbar-thumb {
+  background-color: #212033;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.emptyCartText {
+  font-weight: 700;
+}
