@@ -1,4 +1,4 @@
-import { IClothingItem } from './../types/catalog';
+import { IClothingItem, ICartItem } from './../types/catalog';
 import { createAction } from 'typesafe-actions';
 import { ACTIONS } from './constants';
 
@@ -37,3 +37,6 @@ export const setSingleItemAction = createAction(
 export const getSingleItemAction = createAction(ACTIONS.GET_SINGLE_ITEM)<
   any | null
 >();
+
+export const setCartAction = createAction(ACTIONS.SET_CART)<ICartItem>();
+export const getCartAction = createAction(ACTIONS.GET_CART)();

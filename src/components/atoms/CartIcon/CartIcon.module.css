@@ -3,4 +3,9 @@
   color: #212033;
   margin-right: 30px;
   cursor: pointer;
+  display: flex;
+}
+
+.quantity {
+  color: red;
 }

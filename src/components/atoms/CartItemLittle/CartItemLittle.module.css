@@ -1,0 +1,87 @@
+.container {
+  margin-bottom: 40px;
+  max-width: 300px;
+  display: flex;
+  right: 20px;
+}
+
+.subtitle {
+  font-size: 16px;
+  line-height: 160%;
+  display: flex;
+  align-items: center;
+  color: #1d1f22;
+  max-width: 135px;
+  height: 50px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  margin-bottom: 5px;
+}
+
+.image {
+  max-width: 105px;
+  height: 137px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+}
+
+.image img {
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 20px;
+  min-width: 135px;
+}
+
+.price {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 160%;
+  color: #1d1f22;
+  margin-bottom: 25px;
+}
+
+.option,
+.optionChange {
+  min-width: 24px;
+  height: 24px;
+  font-size: 14px;
+  line-height: 160%;
+  display: flex;
+  border: 1px solid #1d1f22;
+  color: #1d1f22;
+}
+
+.optionText {
+  margin: auto;
+}
+
+.optionChange {
+  cursor: pointer;
+}
+
+.quantityManage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 15px;
+}
+
+.quantity {
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+  line-height: 160%;
+  display: flex;
+  color: #1d1f22;
+}

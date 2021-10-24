@@ -7,3 +7,12 @@ export interface IClothingItem {
   image: string;
   rating: any;
 }
+
+export interface ICartItem {
+  id: number;
+  title: string;
+  price: number;
+  image: string;
+  option: string;
+  quantity: number;
+}

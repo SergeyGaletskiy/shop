@@ -1,0 +1,1 @@
+export { CartItemLittle } from './CartItemLittle';

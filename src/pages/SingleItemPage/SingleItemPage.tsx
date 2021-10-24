@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import cl from './SingleItemPage.module.css';
-import { getSingleItemAction } from '../../core';
+import { getSingleItemAction, setCartAction } from '../../core';
 import { getSingleItemState } from '../../core/selectors/singleItemSelector';
 import { Loader } from '../../components/atoms/Loader';
 import { useParams } from 'react-router-dom';
@@ -35,7 +35,19 @@ export const SingleItemPage = () => {
   }
 
   const selectItemOption = (option: string) => {
-    setSelectedItem({ ...selectedItem, id: itemId, option });
+    setSelectedItem({
+      ...selectedItem,
+      id: singleItem.id,
+      option,
+      quantity: 1,
+      title: singleItem.title,
+      price: singleItem.price,
+      image: singleItem.image,
+    });
+  };
+
+  const addToCart = (item: any) => {
+    dispatch(setCartAction(item));
   };
 
   return (
@@ -89,7 +101,7 @@ export const SingleItemPage = () => {
           <CartButton
             text="ADD TO CART"
             disabled={Object.keys(selectedItem).length > 0 ? false : true}
-            onClick={() => console.log(selectedItem)}
+            onClick={() => addToCart(selectedItem)}
           />
 
           <SingleItemDescription description={singleItem.description} />
