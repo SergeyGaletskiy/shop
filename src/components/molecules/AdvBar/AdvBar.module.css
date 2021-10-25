@@ -3,6 +3,7 @@
   display: flex;
   padding: 0 20px;
   margin-top: 40px;
+  height: 600px;
 }
 
 .advCard {
@@ -17,10 +18,12 @@
   background-repeat: no-repeat;
   position: relative;
   transition: all 500ms ease-in-out;
+  overflow: hidden;
 }
 
 .advCard.active {
   flex: 10;
+  max-width: 870px;
 }
 
 .advCard.active h3 {

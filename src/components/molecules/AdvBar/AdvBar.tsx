@@ -43,27 +43,13 @@ export const AdvBar = () => {
       {advData.map((advertisement, i) => (
         <Advertisement
           advImage={advertisement.image}
-          className={i === activeAdv ? '' : cl.active}
+          className={
+            i !== activeAdv ? cl.advCard : `${cl.advCard} ${cl.active}`
+          }
           taglineText={advertisement.tagline}
-          onClick={() => setActiveAdv(i + 1)}
+          onClick={() => setActiveAdv(i)}
         />
       ))}
     </div>
   );
 };
-
-// const $slides = document.querySelectorAll('.slide');
-
-// for (const $slide of $slides) {
-//   $slide.addEventListener('click', () => {
-//     clearActiveClasses();
-
-//     $slide.classList.add('active');
-//   });
-// }
-
-// function clearActiveClasses() {
-//   $slides.forEach(($slide) => {
-//     $slide.classList.remove('active');
-//   });
-// }

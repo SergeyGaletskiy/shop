@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getCartAction, removeCartAction } from '../../../core';
 import { CartButtonLittle } from '../../atoms/CartButtonLittle';
 import { getCartState } from '../../../core/selectors/cartSelector';
+import { Link } from 'react-router-dom';
 
 export const CartPreview = () => {
   const dispatch = useDispatch();
@@ -13,6 +14,10 @@ export const CartPreview = () => {
   useEffect(() => {
     dispatch(getCartAction());
   }, [dispatch]);
+
+  const cleanCart = () => {
+    dispatch(removeCartAction());
+  };
 
   return (
     <div className={cl.container}>
@@ -26,7 +31,7 @@ export const CartPreview = () => {
             {cartItems
               ? cartItems?.map((item: any) => (
                   <CartItemLittle
-                    key={item.id}
+                    key={`${item.id} + ${item.option}`}
                     itemImage={item.image}
                     itemSubtitle={item.title}
                     itemPrice={item.price}
@@ -49,14 +54,10 @@ export const CartPreview = () => {
             </div>
           </div>
           <div className={cl.buttons}>
-            <CartButtonLittle
-              text={'EMPTY'}
-              onClick={() => dispatch(removeCartAction)}
-            />
-            <CartButtonLittle
-              text={'ORDER'}
-              onClick={() => console.log('Ваш заказ оформлен')}
-            />
+            <CartButtonLittle text={'CLEAR'} onClick={cleanCart} />
+            <Link to="/success_order">
+              <CartButtonLittle text={'ORDER'} />
+            </Link>
           </div>
         </>
       ) : (

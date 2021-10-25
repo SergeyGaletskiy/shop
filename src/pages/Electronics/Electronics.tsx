@@ -24,8 +24,7 @@ export const Electronics = () => {
     <div className={cl.container}>
       <CategorySubtitle subtitle="Electronics" />
       <div className={cl.catalog}>
-        {' '}
-        {electronicsItems?.map((item) => (
+        {electronicsItems?.map((item: any) => (
           <ClothingItemCard
             itemId={item.id}
             key={item.id}

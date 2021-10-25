@@ -3,7 +3,7 @@ import cl from './CartButtonLittle.module.css';
 
 interface ICartButtonLittle {
   text: string;
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 export const CartButtonLittle = ({ text, onClick }: ICartButtonLittle) => {
