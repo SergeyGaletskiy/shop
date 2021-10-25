@@ -9,7 +9,7 @@ export const projectAxios = axios.create();
 projectAxios.interceptors.response.use(
   (res) => res,
   async (error) => {
-    const { status, data } = error.response;
+    const { status } = error.response;
 
     if (status !== 401) {
       return Promise.reject(error);

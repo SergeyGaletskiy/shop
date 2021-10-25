@@ -1,6 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router';
-import { Rate } from '../Rate';
+import { Rate } from '../../atoms/Rate';
 import cl from './ClothingItemCard.module.css';
 
 interface IClothingItemCard {

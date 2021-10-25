@@ -1,4 +1,3 @@
-// import { Action } from 'redux-actions';
 import { takeEvery, call, put } from 'redux-saga/effects';
 import { ACTIONS } from '../actions/constants';
 import { CatalogService } from '../../services/CatalogService';

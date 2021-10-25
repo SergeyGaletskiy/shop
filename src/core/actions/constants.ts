@@ -19,4 +19,5 @@ export enum ACTIONS {
 
   SET_CART = 'SET_CART',
   GET_CART = 'GET_CART',
+  REMOVE_CART = 'REMOVE_CART',
 }
