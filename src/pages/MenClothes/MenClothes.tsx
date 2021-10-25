@@ -24,7 +24,6 @@ export const MenClothes = () => {
     <div className={cl.container}>
       <CategorySubtitle subtitle="Men clothes" />
       <div className={cl.catalog}>
-        {' '}
         {menClothingItems?.map((item) => (
           <ClothingItemCard
             itemId={item.id}

@@ -8,13 +8,13 @@ import { Jewelry } from './pages/Jewelry';
 import { Electronics } from './pages/Electronics';
 import { OtherGoods } from './pages/OtherGoods';
 import { SingleItemPage } from './pages/SingleItemPage';
+import { SuccessOrder } from './pages/SuccessOrder';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Header />
-
         <Switch>
           <Route component={AllItems} exact path="/" />
           <Route component={MenClothes} exact path="/men" />
@@ -23,6 +23,8 @@ function App() {
           <Route component={Electronics} exact path="/electronics" />
           <Route component={OtherGoods} exact path="/other" />
           <Route component={SingleItemPage} exact path="/items/:id" />
+
+          <Route component={SuccessOrder} exact path="/success_order" />
 
           <Redirect exact to="./" />
         </Switch>

@@ -23,7 +23,7 @@ export const SingleItemPage = () => {
   const dispatch = useDispatch();
   const params = useParams<IUseParams>();
   const itemId = params.id;
-  const { singleItem } = useSelector(getSingleItemState);
+  const { singleItem } = useSelector(getSingleItemState) as any;
   const [selectedItem, setSelectedItem] = useState({});
 
   useEffect(() => {
@@ -83,13 +83,13 @@ export const SingleItemPage = () => {
           <div className={cl.options}>
             {stockDatabase.map((selectedId) =>
               selectedId.id === +itemId
-                ? selectedId.stock.map((option) => (
+                ? selectedId.stock.map(({ option, amount }) => (
                     <OptionButton
-                      key={option.option}
+                      key={option}
                       type="button"
-                      onClick={() => selectItemOption(option.option)}
-                      disabled={option.amount > 0 ? false : true}
-                      text={option.option}
+                      onClick={() => selectItemOption(option)}
+                      disabled={amount > 0 ? false : true}
+                      text={option}
                     />
                   ))
                 : ''

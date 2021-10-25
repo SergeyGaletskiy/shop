@@ -5,8 +5,8 @@ import { CategorySubtitle } from '../../components/atoms/CategorySubtitle';
 import { ClothingItemCard } from '../../components/molecules/ClothingItemCard';
 import { getCatalogAction } from '../../core';
 import { getCatalogState } from '../../core/selectors/catalogSelector';
-import { AdvBar } from '../../components/molecules/AdvBar';
 import { Loader } from '../../components/atoms/Loader';
+// import { AdvBar } from '../../components/molecules/AdvBar';
 
 export const AllItems = () => {
   const dispatch = useDispatch();
