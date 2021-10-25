@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { CartItemLittle } from '../../atoms/CartItemLittle';
+import React, { useEffect } from 'react';
+import { CartItemLittle } from '../CartItemLittle';
 import cl from './CartPreview.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { getCartAction } from '../../../core';
+import { getCartAction, removeCartAction } from '../../../core';
 import { CartButtonLittle } from '../../atoms/CartButtonLittle';
 import { getCartState } from '../../../core/selectors/cartSelector';
 
@@ -51,7 +51,7 @@ export const CartPreview = () => {
           <div className={cl.buttons}>
             <CartButtonLittle
               text={'EMPTY'}
-              onClick={() => console.log('Ваша корзина очищена')}
+              onClick={() => dispatch(removeCartAction)}
             />
             <CartButtonLittle
               text={'ORDER'}

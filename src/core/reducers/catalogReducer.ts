@@ -3,11 +3,11 @@ import { setCatalogAction } from './../actions/';
 import { ActionType, createReducer } from 'typesafe-actions';
 
 export interface ICatalogState {
-  clothingItems: IClothingItem[] | null;
+  allItems: IClothingItem[];
 }
 
 const defaultState: ICatalogState = {
-  clothingItems: null,
+  allItems: [],
 };
 
 const actions = {
@@ -19,8 +19,8 @@ export const catalogReducer = createReducer<
   ActionType<typeof actions>
 >(defaultState).handleAction(
   setCatalogAction,
-  (state, { payload: clothingItems }) => ({
+  (state, { payload: allItems }) => ({
     ...state,
-    clothingItems,
+    allItems,
   })
 );

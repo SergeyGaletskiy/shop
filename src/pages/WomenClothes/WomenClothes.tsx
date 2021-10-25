@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import cl from './WomenClothes.module.css';
 import { CategorySubtitle } from '../../components/atoms/CategorySubtitle';
-import { ClothingItemCard } from '../../components/atoms/ClothingItemCard';
+import { ClothingItemCard } from '../../components/molecules/ClothingItemCard';
 import { getWomenCatalogAction } from '../../core';
 import { getWomenCatalogState } from '../../core/selectors/womenCatalogSelector';
 import { Loader } from '../../components/atoms/Loader';

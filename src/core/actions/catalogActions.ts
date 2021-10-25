@@ -3,7 +3,7 @@ import { createAction } from 'typesafe-actions';
 import { ACTIONS } from './constants';
 
 export const setCatalogAction = createAction(ACTIONS.SET_CATALOG)<
-  IClothingItem[] | null
+  IClothingItem[]
 >();
 export const getCatalogAction = createAction(ACTIONS.GET_CATALOG)();
 
@@ -35,8 +35,9 @@ export const setSingleItemAction = createAction(
   ACTIONS.SET_SINGLE_ITEM
 )<IClothingItem | null>();
 export const getSingleItemAction = createAction(ACTIONS.GET_SINGLE_ITEM)<
-  any | null
+  string | null
 >();
 
 export const setCartAction = createAction(ACTIONS.SET_CART)<ICartItem>();
 export const getCartAction = createAction(ACTIONS.GET_CART)();
+export const removeCartAction = createAction(ACTIONS.REMOVE_CART)();

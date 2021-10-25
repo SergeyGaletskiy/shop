@@ -1,4 +1,3 @@
-// import { Action } from 'redux-actions';
 import { takeEvery, call, put } from 'redux-saga/effects';
 import { ACTIONS } from '../actions/constants';
 import { CatalogService } from '../../services/CatalogService';
@@ -9,7 +8,6 @@ export function* getMenCatalogSaga() {
     const data: { data: any } = yield call(() =>
       CatalogService.getMenCatalogItems()
     );
-    console.log('data', { data });
     yield put(setMenCatalogAction(data?.data));
   } catch (e) {
     console.log({ e });
