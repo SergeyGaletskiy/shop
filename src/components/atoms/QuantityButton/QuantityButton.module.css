@@ -1,0 +1,29 @@
+.container {
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+  line-height: 160%;
+  display: flex;
+  color: #212033;
+  background: #fff;
+  cursor: pointer;
+  border: 1px solid #8f8bda;
+}
+
+.container:hover {
+  background: #fff;
+  color: #212033;
+  border: 1px solid #212033;
+}
+
+.container[disabled] {
+  border: 1px solid #a6a6a6;
+  box-sizing: border-box;
+  background: #fff;
+  color: #a6a6a6;
+  cursor: default;
+}
+
+.text {
+  margin: auto;
+}

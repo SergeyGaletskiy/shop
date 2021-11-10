@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import cl from './SuccessOrder.module.css';
 import { CartButton } from '../../components/atoms/CartButton';
 import { CategorySubtitle } from '../../components/atoms/CategorySubtitle';
 import { ItemCardMiddle } from '../../components/molecules/ItemCardMiddle';
 import { getCartAction, removeCartAction } from '../../core/actions';
 import { getCartState } from '../../core/selectors/cartSelector';
-import cl from './SuccessOrder.module.css';
+import { countTotalItems, countTotalSum } from '../../helpers/totalSum';
 
 export const SuccessOrder = () => {
   const dispatch = useDispatch();
@@ -18,6 +19,9 @@ export const SuccessOrder = () => {
   const makeOrder = () => {
     dispatch(removeCartAction());
   };
+
+  const totalItems = countTotalItems(cartItems);
+  const totalSum = countTotalSum(cartItems);
 
   return (
     <div className={cl.container}>
@@ -41,19 +45,10 @@ export const SuccessOrder = () => {
           <div className={cl.total}>
             <div>Total: </div>
             <div>
-              {cartItems?.length} items, $
-              {cartItems
-                ?.reduce((sum, { price }) => {
-                  return sum + price;
-                }, 0)
-                .toFixed(2)}
+              {totalItems} items, ${totalSum}
             </div>
           </div>
-          <CartButton
-            text="CONFIRM ORDER"
-            disabled={false}
-            onClick={makeOrder}
-          />
+          <CartButton text="OK" disabled={false} onClick={makeOrder} />
         </>
       ) : (
         <h3>Nothing in the shopping cart, please checkout</h3>
