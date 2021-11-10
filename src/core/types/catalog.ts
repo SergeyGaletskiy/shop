@@ -1,11 +1,11 @@
-export interface IClothingItem {
+export interface ICatalogItem {
   id: number;
   title: string;
   price: number;
-  description: string;
   category: string;
   image: string;
   rating: any;
+  keyId: string;
 }
 
 export interface ICartItem {
@@ -15,4 +15,5 @@ export interface ICartItem {
   image: string;
   option: string;
   quantity: number;
+  keyId: string;
 }

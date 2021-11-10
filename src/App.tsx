@@ -23,9 +23,7 @@ function App() {
           <Route component={Electronics} exact path="/electronics" />
           <Route component={OtherGoods} exact path="/other" />
           <Route component={SingleItemPage} exact path="/items/:id" />
-
           <Route component={SuccessOrder} exact path="/success_order" />
-
           <Redirect exact to="./" />
         </Switch>
       </BrowserRouter>

@@ -1,19 +1,34 @@
-import React, { useEffect } from 'react';
-import { CartItemLittle } from '../CartItemLittle';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import cl from './CartPreview.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { getCartAction, removeCartAction } from '../../../core';
+import {
+  decrementItemQuantityAction,
+  deleteItemAction,
+  incrementItemQuantityAction,
+  removeCartAction,
+} from '../../../core';
 import { CartButtonLittle } from '../../atoms/CartButtonLittle';
 import { getCartState } from '../../../core/selectors/cartSelector';
-import { Link } from 'react-router-dom';
+import { CartItemLittle } from '../CartItemLittle';
+import { countTotalSum } from '../../../helpers/totalSum';
+import { ICartItem } from '../../../core/types';
 
 export const CartPreview = () => {
   const dispatch = useDispatch();
   const { cartItems } = useSelector(getCartState);
 
-  useEffect(() => {
-    dispatch(getCartAction());
-  }, [dispatch]);
+  const incrementItemQuantity = (item: any) => {
+    dispatch(incrementItemQuantityAction(item));
+  };
+
+  const decrementItemQuantity = (item: any) => {
+    dispatch(decrementItemQuantityAction(item));
+  };
+
+  const removeItem = (item: any) => {
+    dispatch(deleteItemAction(item));
+  };
 
   const cleanCart = () => {
     dispatch(removeCartAction());
@@ -29,29 +44,26 @@ export const CartPreview = () => {
           </div>
           <div className={cl.items}>
             {cartItems
-              ? cartItems?.map((item: any) => (
+              ? cartItems?.map((item: ICartItem) => (
                   <CartItemLittle
-                    key={`${item.id} + ${item.option}`}
+                    key={`${item.id}${item.option}`}
                     itemImage={item.image}
                     itemSubtitle={item.title}
                     itemPrice={item.price}
                     itemQuantity={item.quantity}
                     itemId={item.id}
                     itemOption={item.option}
+                    keyId={`${item.id}${item.option}`}
+                    incrementQuantity={() => incrementItemQuantity(item)}
+                    decrementQuantity={() => decrementItemQuantity(item)}
+                    deleteItem={() => removeItem(item)}
                   />
                 ))
               : ''}
           </div>
           <div className={cl.total}>
             <div>Total</div>
-            <div>
-              $
-              {cartItems
-                ?.reduce((sum, { price }) => {
-                  return sum + price;
-                }, 0)
-                .toFixed(2)}
-            </div>
+            <div>${countTotalSum(cartItems)}</div>
           </div>
           <div className={cl.buttons}>
             <CartButtonLittle text={'CLEAR'} onClick={cleanCart} />

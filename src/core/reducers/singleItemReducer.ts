@@ -1,9 +1,9 @@
-import { IClothingItem } from '../types/catalog';
+import { ICatalogItem } from '../types/catalog';
 import { setSingleItemAction } from '../actions';
 import { ActionType, createReducer } from 'typesafe-actions';
 
 export interface ISingleItemState {
-  singleItem: IClothingItem | null;
+  singleItem: ICatalogItem | null;
 }
 
 const defaultState: ISingleItemState = {

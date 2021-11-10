@@ -1,9 +1,9 @@
-import { IClothingItem } from './../types/catalog';
+import { ICatalogItem } from './../types/catalog';
 import { setElectronicsCatalogAction } from './../actions/';
 import { ActionType, createReducer } from 'typesafe-actions';
 
 export interface IElectronicsCatalogState {
-  electronicsItems: IClothingItem[] | null;
+  electronicsItems: ICatalogItem[] | null;
 }
 
 const defaultState: IElectronicsCatalogState = {

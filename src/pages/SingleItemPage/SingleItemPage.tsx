@@ -37,6 +37,7 @@ export const SingleItemPage = () => {
   const selectItemOption = (option: string) => {
     setSelectedItem({
       ...selectedItem,
+      keyId: singleItem.id + option,
       id: singleItem.id,
       option,
       quantity: 1,
@@ -88,7 +89,7 @@ export const SingleItemPage = () => {
                       key={option}
                       type="button"
                       onClick={() => selectItemOption(option)}
-                      disabled={amount > 0 ? false : true}
+                      disabled={amount === 0}
                       text={option}
                     />
                   ))
@@ -100,7 +101,7 @@ export const SingleItemPage = () => {
 
           <CartButton
             text="ADD TO CART"
-            disabled={Object.keys(selectedItem).length > 0 ? false : true}
+            disabled={Object.keys(selectedItem).length === 0}
             onClick={() => addToCart(selectedItem)}
           />
 
